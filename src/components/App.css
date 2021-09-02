@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+.root {
+    font-family: 'Roboto';
+}
+
+.root > section {
+    margin-top: 67px;
+    margin-bottom: calc(118px + 30px);
+}
+
+.orange-button {
+    background-color: #E8833A;
+    width: 82px;
+    height: 43px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.orange-button span {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}

@@ -1,0 +1,5 @@
+.days-and-sessions__sessions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
