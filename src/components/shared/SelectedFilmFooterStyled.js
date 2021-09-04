@@ -1,4 +1,6 @@
-footer.selected-film {
+import styled from "styled-components";
+
+const SelectedFilmFooter = styled.footer`
     position: fixed;
     background-color: #DFE6ED;
     bottom: 0;
@@ -10,4 +12,6 @@ footer.selected-film {
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
-}
+`;
+
+export {SelectedFilmFooter}

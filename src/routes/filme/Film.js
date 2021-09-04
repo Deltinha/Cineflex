@@ -1,7 +1,7 @@
 import './Film.css';
 import SubHeader from '../../components/shared/SubHeader';
 import DaysAndSessions from "./DaysAndSessions";
-import SelectedFilm from './SelectedFilm';
+import SelectedFilmFooter from '../../components/shared/SelectedFilmFooter';
 
 
 export default function Film(){
@@ -144,7 +144,7 @@ export default function Film(){
 
             </section>
             
-            <SelectedFilm />
+            <SelectedFilmFooter />
         </>
     );
 }

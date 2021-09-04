@@ -1,4 +1,4 @@
-import * as S from './PosterStyle';
+import * as S from './PosterStyled';
 
 export default function Poster(props){
     return (
