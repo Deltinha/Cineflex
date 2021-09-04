@@ -1,10 +1,14 @@
 import * as S from './FilmListStyled';
 import Poster from '../../components/shared/Poster';
 
-export default function FilmList({filmList, setSelectedFilmID}){
+export default function FilmList({filmList, setSelectedFilm}){
     return (
         <S.FilmList>
-            {filmList.map((film)=><Poster key={film.id} img={film.posterURL}/>)}   
+            {filmList.map((film, index)=><Poster
+            key={index}
+            film={film}
+            setSelectedFilm={setSelectedFilm}
+            />)}   
         </S.FilmList>
     );
 }

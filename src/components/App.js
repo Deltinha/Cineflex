@@ -1,25 +1,20 @@
 import '../../src/reset.css';
 import * as S from'./AppStyled.js'
-import Header from './Navbar'
+import Navbar from './Navbar'
 import Home from '../routes/home/Home';
 import Film from '../routes/filme/Film';
 
-
-
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import { axiosCineflexAPI } from '../CineflexAPI';
 
 
 export default function App(){
 
-  const axiosCineflexAPI = axios.create({
-    baseURL: 'https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex/'
-});
-
 
     const [filmList,setFilmList] = useState([]);
-    const [selectedFilmID,setSelectedFilmID] = useState(0);
+    const [selectedFilm,setSelectedFilm] = useState({});
 
     useEffect(()=>{
         const promise = axiosCineflexAPI.get('/movies');
@@ -30,15 +25,22 @@ export default function App(){
 
   return (
     <S.App>
-      <Header />
-
-      <Home 
-      filmList={filmList}
-      setSelectedFilmID={setSelectedFilmID}/>
-
-      {/* <Film /> */}
-
-      
+      <BrowserRouter>
+        <Navbar />
+        
+        <Switch>
+          <Route path='/' exact>
+            <Home 
+            filmList={filmList}
+            setSelectedFilm={setSelectedFilm}/>
+          </Route>
+          <Route path='/filme/:idFilme' exact>
+            <Film
+            selectedFilm={selectedFilm}
+            />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </S.App>
   );
 }
