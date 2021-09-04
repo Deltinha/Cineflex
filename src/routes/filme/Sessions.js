@@ -1,26 +1,20 @@
 import { OrangeButton } from '../../components/shared/OrangeButton';
-import './Sessions.css';
-
-function Session ({sessionTime}){
-    return (
-        <OrangeButton>{sessionTime}</OrangeButton>
-    );
-}
+import * as S from './SessionsStyled.js';
 
 export default function Sessions(){
     const sessionTime = '15:00';
     
     return (
-        <div className='days-and-sessions__sessions'>
-            <Session sessionTime={sessionTime}/>
-            <Session sessionTime={sessionTime}/>
-            <Session sessionTime={sessionTime}/>
-            <Session sessionTime={sessionTime}/>
-            <Session sessionTime={sessionTime}/>
-            <Session sessionTime={sessionTime}/>
-            <Session sessionTime={sessionTime}/>
-            <Session sessionTime={sessionTime}/>
-            <Session sessionTime={sessionTime}/>
-        </div>
+        <S.Sessions>
+            <OrangeButton size='small'>{sessionTime}</OrangeButton>
+            <OrangeButton size='small'>{sessionTime}</OrangeButton>
+            <OrangeButton size='small'>{sessionTime}</OrangeButton>
+            <OrangeButton size='small'>{sessionTime}</OrangeButton>
+            <OrangeButton size='small'>{sessionTime}</OrangeButton>
+            <OrangeButton size='small'>{sessionTime}</OrangeButton>
+            <OrangeButton size='small'>{sessionTime}</OrangeButton>
+            <OrangeButton size='small'>{sessionTime}</OrangeButton>
+            <OrangeButton size='small'>{sessionTime}</OrangeButton>
+        </S.Sessions>
     );
 }

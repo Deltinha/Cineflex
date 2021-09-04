@@ -1,11 +1,11 @@
 import Day from "./Day";
-import './DaysAndSessions.css';
+import * as S from './DaysAndSessionsStyled';
 
 
 
 export default function DaysAndSessions(){
     return (     
-        <ul className='days-and-sessions'>
+        <S.DaysAndSessions>
             <Day />
             <Day />
             <Day />
@@ -16,6 +16,6 @@ export default function DaysAndSessions(){
             <Day />
             
 
-        </ul>
+        </S.DaysAndSessions>
     );
 }

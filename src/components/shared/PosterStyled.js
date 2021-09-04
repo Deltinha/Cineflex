@@ -10,27 +10,21 @@ const Poster = styled.div`
             if (size === 'small') {
                 return '64px';
             }
-            else {
-                return '145px';
-            }
+            return '145px';
         }};
 
         height: ${({size}) => {
             if (size === 'small') {
                 return '89px';
             }
-            else {
-                return '209px';
-            }
+            return '209px';
         }};
 
         box-shadow:  ${({size}) => {
             if (size === 'small') {
                 return '0px 2px 4px 0px rgba(0, 0, 0, 1)';
             }
-            else {
-                return '0px 2px 4px 2px rgba(0, 0, 0, 1)';
-            }
+            return '0px 2px 4px 2px rgba(0, 0, 0, 1)';
         }};
     
     img {
@@ -39,9 +33,7 @@ const Poster = styled.div`
             if (size === 'small') {
                 return '48px';
             }
-            else {
-                return '129px';
-            };
+            return '129px';
         }};
         
 
@@ -49,9 +41,7 @@ const Poster = styled.div`
             if (size === 'small') {
                 return '72px';
             }
-            else {
-                return '193px';
-            }
+            return '193px';
         }};
     }
 `

@@ -1,4 +1,3 @@
-import './Film.css';
 import { SectionHeader } from '../../components/shared/SectionHeader';
 import DaysAndSessions from "./DaysAndSessions";
 import SelectedFilmFooter from '../../components/shared/SelectedFilmFooter';

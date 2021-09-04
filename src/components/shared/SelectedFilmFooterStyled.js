@@ -12,6 +12,17 @@ const SelectedFilmFooter = styled.footer`
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
+
+    .selected-options {
+        margin-left 14px;
+        display: flex;
+        flex-direction: column;
+        height: 89px;
+        justify-content: space-evenly;
+        font-weight: 400;
+        font-size: 26px;
+        color: #293845;
+    }
 `;
 
 export {SelectedFilmFooter}
