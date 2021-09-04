@@ -1,14 +1,14 @@
 import {Date} from './Date.js';
-import Sessions from './Sessions';
+import Showtimes from './Showtimes';
 
-export default function Day(){
-    const dateText = 'Quinta-feira - 24/06/2021';
-
+export default function Day({dayData, setSelectedSessionID}){
     return (
         <div>
-            <Date>{dateText}</Date>
+            <Date>{`${dayData.weekday} - ${dayData.date}`}</Date>
 
-            <Sessions />  
+            <Showtimes
+            showtimes={dayData.showtimes}
+            setSelectedSessionID={setSelectedSessionID}/>  
         </div>
     );
 }
