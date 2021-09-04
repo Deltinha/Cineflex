@@ -1,5 +1,5 @@
 import FilmList from "./FilmList";
-import SubHeader from "../../components/SubHeader";
+import SubHeader from "../../components/shared/SubHeader";
 import './Home.css';
 
 export default function Home(){

@@ -1,4 +1,4 @@
-import Poster from '../../components/Poster';
+import Poster from '../../components/shared/Poster';
 import './SelectedFilm.css';
 
 export default function SelectedFilm(){

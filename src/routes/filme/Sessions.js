@@ -1,10 +1,9 @@
+import { OrangeButton } from '../../components/shared/OrangeButton';
 import './Sessions.css';
 
 function Session ({sessionTime}){
     return (
-        <button className='orange-button'>
-            <span>{sessionTime}</span>
-        </button>
+        <OrangeButton>{sessionTime}</OrangeButton>
     );
 }
 

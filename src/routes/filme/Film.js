@@ -1,5 +1,5 @@
 import './Film.css';
-import SubHeader from "../../components/SubHeader";
+import SubHeader from '../../components/shared/SubHeader';
 import DaysAndSessions from "./DaysAndSessions";
 import SelectedFilm from './SelectedFilm';
 
