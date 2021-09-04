@@ -1,4 +1,4 @@
-import './reset.css'
+import '../../src/reset.css';
 import * as S from'./AppStyled.js'
 import Header from './Navbar'
 import Home from '../routes/home/Home';

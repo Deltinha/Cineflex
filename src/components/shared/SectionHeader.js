@@ -1,4 +1,6 @@
-h1 {
+import styled from "styled-components";
+
+const SectionHeader = styled.h1`
     width: 100%;
     height: 110px;
     display: flex;
@@ -8,4 +10,6 @@ h1 {
     font-size: 24px;
     font-weight: 400;
     color: #293845;
-}
+`;
+
+export {SectionHeader};

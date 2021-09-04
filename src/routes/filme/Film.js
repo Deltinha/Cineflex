@@ -1,5 +1,5 @@
 import './Film.css';
-import SubHeader from '../../components/shared/SubHeader';
+import { SectionHeader } from '../../components/shared/SectionHeader';
 import DaysAndSessions from "./DaysAndSessions";
 import SelectedFilmFooter from '../../components/shared/SelectedFilmFooter';
 
@@ -138,7 +138,7 @@ export default function Film(){
     return (
         <>
             <section>
-                <SubHeader>Selecione o horário</SubHeader>
+                <SectionHeader>Selecione o horário</SectionHeader>
 
                 <DaysAndSessions />
 
