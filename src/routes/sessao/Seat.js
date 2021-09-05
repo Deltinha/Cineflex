@@ -11,6 +11,9 @@ export default function Seat({name, isAvailable}){
         if (isAvailable) {
             setIsSeatSelected(!isSeatSelected);
         }
+        else {
+            alert('Esse assento não está disponível.')
+        }
     }
 
     return (
