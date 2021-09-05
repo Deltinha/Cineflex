@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { useEffect } from 'react/cjs/react.development';
 import { axiosCineflexAPI } from '../../CineflexAPI';
 
-
 export default function Film({selectedFilmID, setSelectedSessionID}){
     const [filmSessions, setFilmSessions] = useState([]);
      useEffect((()=>{
@@ -13,7 +12,7 @@ export default function Film({selectedFilmID, setSelectedSessionID}){
          
           promise.then((res)=>{setFilmSessions(res.data)});
     }),[])
-    
+    console.log(filmSessions)
     return (
         <>
             <section>
@@ -25,7 +24,10 @@ export default function Film({selectedFilmID, setSelectedSessionID}){
 
             </section>
             
-            {/* <SelectedFilmFooter /> */}
+            <SelectedFilmFooter 
+            filmTitle={filmSessions.title}
+            img={filmSessions.posterURL}/>
+            
         </>
     );
 }

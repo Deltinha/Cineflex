@@ -1,12 +1,12 @@
 import * as S from './PosterStyled';
-import { Link } from 'react-router-dom';
 
-export default function Poster({film, size}){
+
+export default function Poster({filmTitle, img, size}){
      return (
-          <Link to={`/filme/${film.id}`}>
+          
           <S.Poster size={size}>
-              <img src={film.posterURL} alt={`Poster do filme ${film.title}`}/>
+              <img src={img} alt={`Poster do filme ${filmTitle}`}/>
           </S.Poster>
-          </Link>
+
      );
 }
