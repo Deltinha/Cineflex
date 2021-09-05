@@ -1,12 +1,19 @@
 import styled from "styled-components";
 
-const Seats = styled.ul`
+const SeatSelection = styled.ul`
     margin-top: 30px;
     margin-bottom: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 18px;
+
+
+    
 `
 
-export {Seats};
+const SeatsRow = styled.li`
+    display: flex;
+    gap: 7px;
+`
+export {SeatsRow, SeatSelection};

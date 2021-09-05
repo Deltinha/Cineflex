@@ -3,7 +3,7 @@ import * as S from './DaysAndSessionsStyled';
 
 
 
-export default function DaysAndSessions({days, setSelectedSessionID}){
+export default function DaysAndSessions({days}){
     if (typeof(days) !== 'undefined') {
         return (     
             <S.DaysAndSessions>
@@ -11,8 +11,7 @@ export default function DaysAndSessions({days, setSelectedSessionID}){
                     days.map((day, index) =>(
                         <Day 
                         key={index} 
-                        dayData={day}
-                        setSelectedSessionID={setSelectedSessionID}/>))
+                        dayData={day}/>))
                 }
             </S.DaysAndSessions>
         )

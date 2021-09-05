@@ -1,9 +1,9 @@
 import * as S from './ScreenStyled';
 
-export default function Screen(){
+export default function Screen({children:screenText}){
     return (
         <S.Screen>
-            <div>TELA</div>
+            <div>{screenText}</div>
         </S.Screen>
     );
 }

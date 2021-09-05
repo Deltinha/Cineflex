@@ -5,7 +5,7 @@ import Home from '../routes/home/Home';
 import Film from '../routes/filme/Film';
 import Session from '../routes/sessao/Session';
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
@@ -14,8 +14,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 export default function App(){
 
-    const [selectedFilmID,setSelectedFilmID] = useState({});
-    const [selectedSessionID, setSelectedSessionID] = useState(0);
+    //const [selectedFilmTitle,setSelectedFilmTitle] = useState();
+    //const [selectedShowtime, setSelectedShowtime] = useState();
+
+
+    //console.log(selectedShowtime)
 
   return (
     <S.App>
@@ -24,16 +27,14 @@ export default function App(){
         
         <Switch>
           <Route path='/' exact>
-            <Home 
-            setSelectedFilmID={setSelectedFilmID}/>
+            <Home />
           </Route>
-          <Route path='/filme/:idFilme' exact>
-            <Film
-            selectedFilmID={29}
-            setSelectedSessionID={setSelectedSessionID}
-            />
+
+          <Route path='/filme/:filmID' exact>
+            <Film />
           </Route>
-          <Route path='/sessao/:idSessao' exact>
+
+          <Route path='/sessao/:sessionID' exact>
             <Session />
           </Route>
         </Switch>

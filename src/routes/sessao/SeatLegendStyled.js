@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-const SeatsLegend = styled.div`
+const SeatLegend = styled.div`
     
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 40px;
+    gap: 43px;
 
     div {
         display: flex;
@@ -21,4 +22,4 @@ const SeatsLegend = styled.div`
     }
 `;
 
-export {SeatsLegend};
+export {SeatLegend};

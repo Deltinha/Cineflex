@@ -4,7 +4,7 @@ import './Home.css';
 import { axiosCineflexAPI } from '../../CineflexAPI';
 import { useState, useEffect } from "react";
 
-export default function Home({setSelectedFilmID}){
+export default function Home(){
     const [filmList,setFilmList] = useState([]);
 
     useEffect(()=>{
@@ -19,8 +19,7 @@ export default function Home({setSelectedFilmID}){
             <SectionHeader>Selecione o filme</SectionHeader>
 
             <FilmList
-            filmList={filmList}
-            setSelectedFilmID={setSelectedFilmID}/>
+            filmList={filmList}/>
         </section>
     );
 }

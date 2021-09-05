@@ -1,14 +1,13 @@
 import {Date} from './Date.js';
 import Showtimes from './Showtimes';
 
-export default function Day({dayData, setSelectedSessionID}){
+export default function Day({dayData}){
     return (
         <div>
             <Date>{`${dayData.weekday} - ${dayData.date}`}</Date>
 
             <Showtimes
-            showtimes={dayData.showtimes}
-            setSelectedSessionID={setSelectedSessionID}/>  
+            showtimes={dayData.showtimes}/>  
         </div>
     );
 }

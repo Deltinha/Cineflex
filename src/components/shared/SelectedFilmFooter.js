@@ -1,18 +1,19 @@
 import Poster from './Poster';
 import * as S from './SelectedFilmFooterStyled.js';
 
-function InfoSelected({filmTitle}){
-    let selectedSessionTime = 'Quinta-Feira - 15:00';
+function InfoSelected({filmTitle, weekday, time}){
+
+    const isSessionSelected = Boolean(time);
 
     return (
         <div className='selected-options'>
             <span>{filmTitle}</span>
-            {selectedSessionTime ? <span>Quinta-Feira - 15:00</span> : ''}
+            {isSessionSelected ? <span>{`${weekday} - ${time}`}</span> : ''}
         </div>
     );
 }
 
-export default function SelectedFilmFooter({filmTitle, img}){
+export default function SelectedFilmFooter({filmTitle, img, weekday, time}){
     return(
         <S.SelectedFilmFooter>
             <Poster 
@@ -20,7 +21,9 @@ export default function SelectedFilmFooter({filmTitle, img}){
             img={img}/>
 
             <InfoSelected
-            filmTitle={filmTitle}/>
+            filmTitle={filmTitle}
+            weekday={weekday}
+            time={time} />
         </S.SelectedFilmFooter>
     );
 }

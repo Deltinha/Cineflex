@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const SelectedFilmFooter = styled.footer`
     position: fixed;
+    z-index: 5;
     background-color: #DFE6ED;
     bottom: 0;
     left: 0;
@@ -12,6 +13,7 @@ const SelectedFilmFooter = styled.footer`
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
+    
 
     .selected-options {
         margin-left 14px;

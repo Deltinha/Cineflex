@@ -1,11 +1,12 @@
-import * as S from './SeatsLegendStyled';
+import * as S from './SeatLegendStyled';
 import { Seat } from './SeatStyled';
 
-export default function SeatsLegend (){
+export default function SeatLegend (){
     return (
-        <S.SeatsLegend>
+        <S.SeatLegend>
             <div>
-                <Seat />
+                <Seat 
+                isSeatSelected={true}/>
                 <span>Selecionado</span>
             </div>
             <div>
@@ -13,9 +14,10 @@ export default function SeatsLegend (){
                 <span>Disponível</span>
             </div>
             <div>
-                <Seat />
+                <Seat 
+                isAvailable={false}/>
                 <span>Indisponível</span>
             </div>
-        </S.SeatsLegend>
+        </S.SeatLegend>
     );
 }
