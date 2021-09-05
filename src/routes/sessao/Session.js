@@ -1,7 +1,10 @@
 import { SectionHeader } from "../../components/shared/SectionHeader";
 
-import * as S from './SeatStyled';
 import Screen from "./Screen";
+import SeatsRow from "./SeatsRow";
+import {Seats} from './SeatsStyled';
+import SeatsLegend from "./SeatsLegend";
+import MakeReservationsForm from "./MakeReservationsForm";
 
 export default function Session(){
     return (
@@ -9,9 +12,15 @@ export default function Session(){
         <section>
             <SectionHeader>Selecione os assentos</SectionHeader>
             <Screen />
-            <ul className='seats'>
-                <S.Seat />
-            </ul>
+            <Seats>
+                <SeatsRow />
+                <SeatsRow />
+                <SeatsRow />
+                <SeatsRow />
+                <SeatsRow />
+            </Seats>
+            <SeatsLegend />
+            <MakeReservationsForm />
         </section>
         </>
     );
