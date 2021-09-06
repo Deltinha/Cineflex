@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const OrangeButton = styled.button`
-    background-color: #E8833A;
+        background-color: #E8833A;
         border-radius: 3px;
         display: flex;
         justify-content: center;
@@ -17,6 +17,10 @@ const OrangeButton = styled.button`
             }
             return '225px';
         }};
+
+        &:hover{
+            cursor: pointer;
+        }
 `
 
 export {OrangeButton};

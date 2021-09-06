@@ -1,15 +1,24 @@
 import { useState } from 'react';
 import * as S from './SeatStyled';
 
-export default function Seat({name, isAvailable}){
+export default function Seat({seat, reservationDetails}){
     
     const [isSeatSelected, setIsSeatSelected] = useState(false);
 
+    function setReservedSeat (id, name){
+        if (reservationDetails.seats.some(reservedSeat => reservedSeat.id === id)) {
+          reservationDetails.seats = reservationDetails.seats.filter((reservedSeat)=>(reservedSeat.id!==id));
+        }
 
+        else {
+          reservationDetails.seats.push({id, name});
+        }
+    }
+    
     function selectSeat(){
-        
-        if (isAvailable) {
+        if (seat.isAvailable) {
             setIsSeatSelected(!isSeatSelected);
+            setReservedSeat(seat.id, seat.name);
         }
         else {
             alert('Esse assento não está disponível.')
@@ -18,8 +27,12 @@ export default function Seat({name, isAvailable}){
 
     return (
         <S.Seat
-        onClick={()=>selectSeat()}
+        onClick={()=>{
+            selectSeat();
+
+            }}
         isSeatSelected={isSeatSelected}
-        isAvailable={isAvailable}>{name}</S.Seat>
+        isAvailable={seat.isAvailable}
+        >{seat.name}</S.Seat>
     );
 }

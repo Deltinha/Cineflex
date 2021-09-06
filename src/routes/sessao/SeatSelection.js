@@ -1,14 +1,15 @@
 import * as S from './SeatSelectionStyled';
 import Seat from './Seat';
 
-function SeatsRow({seats}){
+function SeatsRow({seats,reservationDetails}){
     return (
         <S.SeatsRow>
             {seats.map((seat, index)=>(
                 <Seat
                 key={index}
-                name={seat.name}
-                isAvailable={seat.isAvailable}/>
+                seat={seat}
+                reservationDetails={reservationDetails}
+                />
             ))}
         </S.SeatsRow>
     );
@@ -24,8 +25,7 @@ function splitArray(array, chunkSize){
 
 }
 
-export default function SeatSelection({seats}){
-    
+export default function SeatSelection({seats, reservationDetails}){
     let seatsRowArray = splitArray(seats, 10);
 
     return (
@@ -35,7 +35,9 @@ export default function SeatSelection({seats}){
                 seatsRowArray.map((row, index) => (
                     <SeatsRow
                     key={index}
-                    seats={row}/>
+                    seats={row}
+                    reservationDetails={reservationDetails}
+                    />
                 ))
             }
         </S.SeatSelection>

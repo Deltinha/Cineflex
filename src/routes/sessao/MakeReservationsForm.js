@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { OrangeButton } from "../../components/shared/OrangeButton";
 import * as S from './MakeReservationsFormStyled';
 
@@ -10,8 +11,10 @@ export default function MakeReservationsForm(){
             <label htmlFor="buyer-cpf">CPF do comprador:</label>
             <input type="text" id="buyer-cpf" name="buyer-cpf" placeholder="Digite seu CPF" />
         </form>
-
-        <OrangeButton>Reservar assento(s)</OrangeButton>
+        
+        <Link to='/sucesso'>
+            <OrangeButton>Reservar assento(s)</OrangeButton>
+        </Link>
         </S.MakeReservationsForm>
     );
 }

@@ -9,22 +9,20 @@ import { useEffect, useState } from "react/cjs/react.development";
 import { axiosCineflexAPI } from "../../CineflexAPI";
 import SelectedFilmFooter from "../../components/shared/SelectedFilmFooter";
 
-export default function Session(){
+export default function Session({reservationDetails}){
     const selectedSessionID = useParams().sessionID;
 
-    const [seatsData, setseatsData] = useState([]);
+    const [seatsData, setSeatsData] = useState([]);
 
     useEffect((()=>{
         const promise = axiosCineflexAPI.get(`/showtimes/${selectedSessionID}/seats`);
 
         promise.then((res)=>{
-            setseatsData(res.data);
+            setSeatsData(res.data);
         });
     }),[]);
-
-    //console.log(seatsData)
-    
     if (typeof(seatsData.movie) !== 'undefined') {
+        console.log(seatsData)
         return (
             <>
             <section>
@@ -32,7 +30,9 @@ export default function Session(){
                 <Screen>TELA</Screen>
 
                 <SeatSelection
-                seats={seatsData.seats}/>
+                seats={seatsData.seats}
+                reservationDetails={reservationDetails}
+                />
 
                 <SeatLegend />
                 <MakeReservationsForm />

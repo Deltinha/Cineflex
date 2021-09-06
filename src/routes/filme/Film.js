@@ -19,7 +19,6 @@ export default function Film(){
         });
     }),[]);
 
-    console.log(filmSessions.title);
     return (
         <>
             <section>
