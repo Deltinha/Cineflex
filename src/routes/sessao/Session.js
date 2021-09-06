@@ -9,6 +9,13 @@ import { useEffect, useState } from "react/cjs/react.development";
 import { axiosCineflexAPI } from "../../CineflexAPI";
 import SelectedFilmFooter from "../../components/shared/SelectedFilmFooter";
 
+function updateReservationDetails(reservationDetails, title, date, time){
+    reservationDetails.title = title;
+    reservationDetails.date = date;
+    reservationDetails.time = time;
+    return reservationDetails;
+}
+
 export default function Session({reservationDetails}){
     const selectedSessionID = useParams().sessionID;
 
@@ -22,7 +29,9 @@ export default function Session({reservationDetails}){
         });
     }),[]);
     if (typeof(seatsData.movie) !== 'undefined') {
-        console.log(seatsData)
+
+        reservationDetails = updateReservationDetails(reservationDetails, seatsData.movie.title, seatsData.day.date, seatsData.name);
+        
         return (
             <>
             <section>
@@ -35,7 +44,8 @@ export default function Session({reservationDetails}){
                 />
 
                 <SeatLegend />
-                <MakeReservationsForm />
+                <MakeReservationsForm
+                reservationDetails={reservationDetails}/>
             </section>
     
             <SelectedFilmFooter

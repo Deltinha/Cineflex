@@ -16,19 +16,13 @@ import Success from '../routes/sucesso/Success';
 export default function App(){
 
     const reservationDetails = {
-      film: 'Baby Driver',
-	    date: '24/10/2021',
-	    time: '19:00',
-	    buyerName: 'Moisés',
-	    cpf: '2312312',
-	    seats: [{id:1,name:100},{id:2,name:200},{id:3,name:300}]
+      title: '',
+	    date: '',
+	    time: '',
+	    buyerName: '',
+	    cpf: '',
+	    seats: []
     }
-    
-    function setReservationData(){
-      return;
-    }
-
-    //console.log(selectedShowtime)
 
   return (
     <S.App>

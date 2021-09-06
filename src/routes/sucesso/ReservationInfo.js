@@ -1,10 +1,10 @@
 import * as S from './ReservationInfoStyled';
 
-function FilmAndSession({film, date, time}){
+function FilmAndSession({title, date, time}){
     return (
         <div>
             <h2>Filme e sessão</h2> 
-            <span>{film}</span>
+            <span>{title}</span>
             <span>{date} {time}</span>
         </div>
     );
@@ -35,7 +35,7 @@ export default function ReservationInfo({reservationDetails}){
     return (
         <S.ReservationInfo>
             <FilmAndSession 
-            film={reservationDetails.film}
+            title={reservationDetails.title}
             date={reservationDetails.date}
             time={reservationDetails.time}/>
 

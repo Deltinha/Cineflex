@@ -9,9 +9,6 @@ const Seat = styled.div`
     justify-content: center;
     box-sizing: border-box;
 
-    /* background-color: #C3CFD9;
-    border: 1px solid #808F9D; */
-
     border-style: solid;
     border-width: 1px;
 
