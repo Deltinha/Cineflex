@@ -4,14 +4,8 @@ import Navbar from './Navbar'
 import Home from '../routes/home/Home';
 import Film from '../routes/filme/Film';
 import Session from '../routes/sessao/Session';
-
-import { useState } from "react";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Success from '../routes/sucesso/Success';
-
-
-
-
 
 export default function App(){
 

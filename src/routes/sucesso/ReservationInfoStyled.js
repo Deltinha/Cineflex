@@ -26,7 +26,4 @@ const ReservationInfo = styled.div`
     }
 `;
 
-const FilmAndSession = styled.div`
-`;
-
 export {ReservationInfo};

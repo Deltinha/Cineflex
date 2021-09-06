@@ -7,11 +7,10 @@ import { axiosCineflexAPI } from '../../CineflexAPI';
 import { useParams } from 'react-router';
 
 export default function Film(){
-    const selectedFilmID = useParams().filmID;
     const [filmSessions, setFilmSessions] = useState([]);
+    const selectedFilmID = useParams().filmID;
     
     useEffect((()=>{
-        
         const promise = axiosCineflexAPI.get(`/movies/${selectedFilmID}/showtimes`);
          
         promise.then((res)=>{

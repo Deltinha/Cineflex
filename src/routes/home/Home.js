@@ -1,6 +1,6 @@
 import FilmList from "./FilmList";
 import { SectionHeader } from "../../components/shared/SectionHeader";
-import './Home.css';
+import * as S from './HomeStyled'
 import { axiosCineflexAPI } from '../../CineflexAPI';
 import { useState, useEffect } from "react";
 
@@ -15,11 +15,11 @@ export default function Home(){
     },[]);
     
     return (
-        <section className='home'>
+        <S.Home>
             <SectionHeader>Selecione o filme</SectionHeader>
 
             <FilmList
             filmList={filmList}/>
-        </section>
+        </S.Home>
     );
 }

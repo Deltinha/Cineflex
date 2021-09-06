@@ -23,7 +23,7 @@ export default function MakeReservationsForm({reservationDetails}){
             reservedSeats.push(seat.id);
         });
         
-        const promise = axiosCineflexAPI.post('https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex/seats/book-many',
+        axiosCineflexAPI.post('https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex/seats/book-many',
             {
                 ids: reservedSeats,
                 name: reservationDetails.buyerName,

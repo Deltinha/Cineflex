@@ -14,11 +14,18 @@ export default function Seat({seat, reservationDetails}){
           reservationDetails.seats.push({id, name});
         }
     }
+
+    function sortReservedSeats(){
+        reservationDetails.seats.sort((a,b)=>(
+            a.id > b.id
+        ))
+    }
     
     function selectSeat(){
         if (seat.isAvailable) {
             setIsSeatSelected(!isSeatSelected);
             setReservedSeat(seat.id, seat.name);
+            sortReservedSeats();
         }
         else {
             alert('Esse assento não está disponível.')
